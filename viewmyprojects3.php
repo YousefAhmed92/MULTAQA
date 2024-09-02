@@ -10,7 +10,20 @@ $query = "SELECT * FROM `project`
           WHERE `project`.`client_id` = '$client_id'";
 
 $result = mysqli_query($connect, $query);
-mysqli_close($connect);
+
+if (isset($_POST['delete_project'])) {
+    $project_id = $_POST['project_id'];
+
+    // Delete query
+    $deleteQuery = "DELETE FROM `project` WHERE `project_id` = '$project_id'";
+
+    if (mysqli_query($connect, $deleteQuery)) {
+        echo "<script>alert('Project deleted successfully.'); window.location.href='viewmyprojects3.php';</script>";
+    } else {
+        echo "Error deleting project: " . mysqli_error($connect);
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,13 +75,18 @@ mysqli_close($connect);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="#">Landing</a>
+                        <a class="nav-link active" aria-current="page" href="landing.php">Landing</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="viewmyprojects3.php">My projects</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="freelancer-send-request.php">My requests</a>
                     </li>
+                    
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="agancy.profile.php">Profile</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
@@ -104,12 +122,21 @@ mysqli_close($connect);
                 
             
         
-                <a  class=""href="team.project.details.php?project_id=<?php echo $row['project_id']?>"><span>Read More</span></a>
-
+                <form action="" method="POST" onsubmit="return confirm('Are you sure you want to delete this project?');">
+                    <input type="hidden" name="project_id" value="<?php echo $row['project_id']; ?>">
+                    <button type="submit" name="delete_project" class="dlt">Delete</button>
+                </form>
             </div>
             <?php } ?>
         </div>
     </div>
+<style>
+    .dlt{
+        background-color: darkred;
+        width: 150px;
+    }
+</style>
+
 </body>
 
 </html>
