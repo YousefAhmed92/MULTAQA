@@ -19,7 +19,7 @@ $result = mysqli_query($connect, $query);
         //            (NULL,'$project_name', '$project_description', '$hours', 'team' , '$category', '$client_id', '$status')";
 
         $insert = "INSERT INTO `project` (`project_id`, `project_name`, `descriptionP`, `hours`, `type`, `cat_id`, `client_id`, `status`) 
-           VALUES (NULL, '$project_name', '$project_description', '$hours', 'individual', '$category', '$client_id', '$status')";
+           VALUES (NULL, '$project_name', '$project_description', '$hours', 'team', '$category', '$client_id', '$status')";
         $run_insert = mysqli_query($connect, $insert);
         echo 4 ;
 
