@@ -21,7 +21,7 @@ include "mail.php";
                 $_SESSION['client_id'] = $client_id;
                 // echo "logged";
                 header("Location:security pin client.php");
-                $secured=" Welcome back to MULTAQA you're about to login to your account if it's not you please click here to to get your account back: http://localhost/case2tie/loginA.php
+                $secured=" Welcome back to MULTAQA you're about to login to your account if it's not you please click here to to get your account back: http://localhost/lastdance/loginA.php
                   -MULTAQA TEAM ";
                 $mail->setFrom('fatma.said283@gmail.com', 'MULTAQA'); // Sender mail address
                 $mail->addAddress($email); // Receiver mail address
