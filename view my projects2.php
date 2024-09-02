@@ -58,7 +58,7 @@ mysqli_close($connect);
        
 <body>
      <!-- NAV BAR STARTS -->
-     <nav id="NAV" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+       <nav id="NAV" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
         <div class="container">
         <img src="img/image.png" alt="">
             <a class="navbar-brand" href="#">MULTAQA</a>
@@ -69,13 +69,14 @@ mysqli_close($connect);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="#">Landing</a>
+                        <a class="nav-link active" aria-current="page" href="landing.php">Landing</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="client-send-request.php">my requests</a>
                     </li>
+                    
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="freelancer.profile.php">my profile</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
@@ -84,7 +85,7 @@ mysqli_close($connect);
                 </form> -->
             </div>
         </div>
-    </nav>
+  </nav>
     <!-- NAV BAR ENDS -->
     <div class="main">
         <div class="title">
