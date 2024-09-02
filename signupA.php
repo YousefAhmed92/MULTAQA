@@ -397,7 +397,7 @@ select.input-field {
 
 <body>
  <!-- NAV BAR STARTS -->
- <nav id="NAV" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+<!--  <nav id="NAV" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
         <div class="container">
         <img src="img/image.png" alt="">
             <a class="navbar-brand" href="#">MULTAQA</a>
@@ -417,13 +417,13 @@ select.input-field {
                         <a class="nav-link" href="#">Profile</a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex" role="search">
+                <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
+                </form>
             </div>
         </div>
-  </nav>
+  </nav> -->
     <!-- NAV BAR ENDS -->
 
  <!-- FORM STARTS -->
