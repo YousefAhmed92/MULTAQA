@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --color-1: #040D12;
+    --color-2: #183D3D;
+    --color-3: #5C8374;
+    --color-4: #93B1A6;
+}
+
+/* NAV BAR STARTS */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.442);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
+}
+
+.navbar-brand {
+    font-family: "El Messiri", sans-serif;
+    font-size: 23px;
+}
+
+a.nav-link.active:hover {
+    text-decoration: none;
+    /* font-size: 17px; */
+    color: var(--color-4);
+    transform: scale(1.1);
+}
+
+a.nav-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+a.nav-link:hover {
+    text-decoration: none;
+    color: var(--color-4);
+    transform: scale(1.1);
+}
+
+/* NAV BAR ENDS */
+
+body {
+    background-color: #040D12;
+    height: 130vh;
+    color: #93B1A6;
+    display: flex;
+    justify-content: center;
+    font-family: NONE;
+
+}
+
+.main-div {
+    height: 90vh;
+    background-image: linear-gradient(var(--color-1), var(--color-2), var(--color-1));
+    width: 65%;
+    margin-top: 6%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #101514,
+        0 0 3px var(--color-3), 0 0 8px var(--color-2),
+        0 0 8px var(--color-3), 0 0 10px var(--color-3);
+
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 6%;
+    color: var(--color-3);
+    text-shadow: var(--color-4) 1px 1px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+p {
+    font-size: 19px;
+    /* margin-top: 2%; */
+    color: rgba(255, 255, 255, 0.582);
+    margin-left: 6%;
+    margin-right: 15%;
+    line-height: 1.2;
+}
+
+/* 
+.my-comment {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.my-comment textarea {
+    border-radius: 10px;
+    height: 3vh;
+    width: 60%;
+    padding: 15px;
+}
+
+.my-comment .add-comment {
+    display: flex;
+    padding: 10px 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: #040D12;
+    color: #5C8374;
+    font-size: larger;
+    transition: 0.2s;
+
+}
+
+.my-comment textarea {
+    resize: none;
+    background-color: #040D12;
+    color: aliceblue;
+} */
+
+
+/* .send {
+    display: block;
+    margin-left: 35%;
+    margin-top: 3%;
+    width: 30%;
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #040D12, #5C8374);
+    color: var(--color-4);
+    overflow: hidden;
+    box-shadow: 0 0 5px #5C8374;
+
+}
+
+.send span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.send::before,
+.send::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.send::before {
+    content: "";
+    background: #040D12;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.send:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.send:active {
+    transform: scale(0.95);
+} */
+
+
+@media only screen and (max-width:850px) {
+
+
+    .main-div {
+        height: 95vh;
+        margin-top: 13%;
+    }
+
+}
