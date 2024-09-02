@@ -218,7 +218,7 @@ if(isset($_POST['submit'])){
 <!-- FORM STARTS -->
 <body>
      <!-- NAV BAR STARTS -->
-     <nav id="NAV" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
+<!--      <nav id="NAV" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
         <div class="container">
         <img src="img/image.png" alt="">
             <a class="navbar-brand" href="#">MULTAQA</a>
@@ -244,7 +244,7 @@ if(isset($_POST['submit'])){
                 </form> -->
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!-- NAV BAR ENDS -->
 
 <!-- FORM STARTS -->
