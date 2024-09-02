@@ -319,13 +319,14 @@ $finaldistrial=$fetch['description'];
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="#">Landing</a>
+                        <a class="nav-link active" aria-current="page" href="landing.php">Landing</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="client-send-request.php">my requests</a>
                     </li>
+                    
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="agencies.php">Agancies</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
