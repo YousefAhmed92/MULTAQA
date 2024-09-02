@@ -162,7 +162,7 @@ mysqli_close($connect);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="landind.php">Landing</a>
+                        <a class="nav-link active" aria-current="page" href="landing.php">Landing</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="freelancer.profile.php">Profile</a>
