@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --color-1: #040D12;
+    --color-2: #183D3D;
+    --color-3: #5C8374;
+    --color-4: #93B1A6;
+}
+
+body {
+    background-image: linear-gradient(var(--color-1), var(--color-2), var(--color-1));
+    height: 110vh;
+    color: #93B1A6;
+    display: flex;
+    justify-content: center;
+    font-family: none;
+}
+
+
+
+/* NAV BAR STYLING STARTS */
+#NAV {
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.442);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
+    z-index: 1000;
+    font-family: "Philosopher", sans-serif;
+   }
+   
+   .container {
+    padding: 13px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   
+   .container img {
+    width: 5%;
+   }
+   
+   .navbar-brand {
+   
+    font-size: 23px;
+   }
+   
+   a.nav-link.active:hover {
+    text-decoration: none;
+    color: var(--color-4);
+    transform: scale(1.1);
+   }
+   
+   a.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+   }
+   
+   a.nav-link:hover {
+    text-decoration: none;
+    color: var(--color-4);
+    transform: scale(1.1);
+   }
+   
+   button {
+    color: #fff !important;
+    border-color: var(--color-4) !important;
+   }
+   
+   button:hover {
+    background-color: #183D3D !important;
+    box-shadow: 0 0 20px #101514,
+        0 0 1px var(--color-3), 0 0 2px var(--color-2),
+        0 0 2px var(--color-3), 0 0 4px var(--color-3);
+   }
+   
+   /* NAV BAR STYLING ENDS */
+   
+
+
+
+.main-div {
+    height: fit-content;
+    background-color: #040D12;
+    width: 40%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #101514,
+        0 0 2px var(--color-3), 0 0 5px var(--color-2),
+        0 0 5px var(--color-3), 0 0 8px var(--color-3);
+}
+
+.input {
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    left: 10px;
+    text-wrap: nowrap;
+    text-decoration: none !important;
+
+}
+
+.form{
+    width: 100%;
+}
+
+.user_details{
+    display: flex;
+    justify-content: center;
+}
+
+.input_box {
+    margin-bottom: 15px;
+    width: calc(66% - 10px);
+    font-family: none;
+    position: relative;
+    /* margin-left: 4%; */
+}
+
+.input_box span.details {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input_box input,
+.input_box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-4);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: var(--color-1);
+    color: #fff;
+}
+
+.input_box input[type="file"] {
+    padding: 5px;
+}
+
+.input_box input:focus,
+.input_box select:focus {
+    border-color: #93B1A6;
+    border-width: 2px;
+}
+
+
+
+h1 {
+    font-size: 33px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 4%;
+    padding-bottom: 4%;
+    color: var(--color-3);
+    text-shadow: var(--color-4) 1px 1px;
+    font-family: NONE;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 3%;
+    color: rgba(255, 255, 255, 0.582);
+    margin-left: 5%;
+    padding-right: 4%;
+}
+
+.cssbuttons-io {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 40%;
+    margin-top: 3% !important;
+    position: relative;
+    font-family: none;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #040D12, #5C8374);
+    color: var(--color-4);
+    overflow: hidden;
+    box-shadow: 0 0 20px #101514,
+        0 0 1px var(--color-3), 0 0 3px var(--color-2),
+        0 0 3px var(--color-3), 0 0 6px var(--color-3);
+    margin: auto;
+}
+
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6em 1.2em 0.6em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.cssbuttons-io::before {
+    content: "";
+    background: #040D12;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
+.container img {
+    width: 5%;
+}
+
+
+@media (max-width:1025px){
+    .main-div{
+        width: 60%;
+    }
+}
+
+@media (max-width:805px) {
+
+    .main-div {
+        height: fit-content;
+        background-color: #040D12;
+        width: 70%;
+        margin: auto;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #101514,
+            0 0 2px var(--color-3), 0 0 5px var(--color-2),
+            0 0 5px var(--color-3), 0 0 8px var(--color-3);
+    }
+}
+
+@media (max-width:575px){
+    .input_box {
+        margin-bottom: 15px;
+        width: 100%;
+        font-family: none;
+        position: relative;
+        margin-left: 4%;
+    }
+}
+
+@media (max-width:415px){
+    .main-div {
+        height: fit-content;
+        background-color: #040D12;
+        width: 95%;
+        margin: auto;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #101514, 0 0 2px var(--color-3), 0 0 5px var(--color-2), 0 0 5px var(--color-3), 0 0 8px var(--color-3);
+    }
+}

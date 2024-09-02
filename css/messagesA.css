@@ -1,0 +1,200 @@
+:root {
+    --color-1: #040D12;
+    --color-2: #183D3D;
+    --color-3: #5C8374;
+    --color-4: #93B1A6;
+}
+
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAV BAR STARTS */
+/* NAV BAR ENDS */
+
+/* PAGE CONTENT STARTS */
+body {
+    background-color: var(--color-1);
+}
+
+.main {
+    width: 90%;
+    margin: 50px auto;
+    border-radius: 20px;
+    height: fit-content;
+    padding: 20px;
+    box-shadow: 0 0 20px #101514,
+        0 0 3px var(--color-3), 0 0 8px var(--color-2),
+        0 0 8px var(--color-3), 0 0 10px var(--color-3);
+}
+
+.main h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--color-2);
+    text-shadow: var(--color-4) 1px 1px;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td h3 {
+    color: var(--color-4);
+}
+
+td p {
+    color: #fff;
+}
+
+td {
+    color: white;
+    border: 1px solid var(--color-4);
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+}
+
+.table a {
+    text-decoration: none;
+    color: var(--color-4);
+}
+
+.table button {
+    margin: 3px;
+}
+
+
+.cssbuttons-accept {
+    margin: 30px auto 0 auto;
+    width: fit-content;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #040D12, #5C8374);
+    color: white;
+    overflow: hidden;
+}
+  
+.cssbuttons-accept span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+  
+.cssbuttons-accept::before,
+.cssbuttons-accept::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+  
+.cssbuttons-accept::before {
+    content: "";
+    background: var(--color-3);
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+  
+.cssbuttons-accept:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+  
+.cssbuttons-accept:active {
+    transform: scale(0.95);
+}
+
+
+.cssbuttons-reject {
+    margin: 30px auto 0 auto;
+    width: fit-content;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #183D3D , #93B1A6);
+    color: black;
+    overflow: hidden;
+}
+  
+.cssbuttons-reject span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+  
+.cssbuttons-reject::before,
+.cssbuttons-reject::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+  
+.cssbuttons-reject::before {
+    content: "";
+    background-color: rgb(238, 77, 77);
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+  
+.cssbuttons-reject:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+  
+.cssbuttons-reject:active {
+    transform: scale(0.95);
+}
+
+/* RESPONSIVE CODES */
+@media (max-width: 670px) {
+    .main {
+        width: 95%;
+        margin: 50px auto;
+        border-radius: 20px;
+        height: fit-content;
+        padding: 20px;
+        box-shadow: 0 0 30px var(--color-3);
+    }
+}
+
+@media (max-width: 470px) {
+    .main {
+        width: fit-content;
+        margin: 50px auto;
+        border-radius: 20px;
+        height: fit-content;
+        padding: 20px;
+        box-shadow: 0 0 30px var(--color-3);
+    }
+}
+/* PAGE CONTENT ENDS */

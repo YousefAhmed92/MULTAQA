@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #040D12;
+    --color-2: #183D3D;
+    --color-3: #5C8374;
+    --color-4: #93B1A6;
+}
+
+body {
+    background-image: linear-gradient(var(--color-1), var(--color-2), var(--color-1));
+    /* font-family: Arial, sans-serif; */
+}
+
+.container {
+    background-color: var(--color-1);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: none;
+}
+
+.mid {
+    background-color: var(--color-1);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0 0 20px #101514,
+                0 0 2px var(--color-3), 0 0 5px var(--color-2),
+                0 0 5px var(--color-3), 0 0 8px var(--color-3);
+}
+
+.title {
+    color: var(--color-3);
+    text-shadow: var(--color-4) 1px 1px;
+    font-size: 33px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 20px;
+    font-family: none;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    font-family: none;
+}
+
+.input-container.ic1 {
+    margin-top: 35px;
+    font-family: none;
+}
+
+.input {
+    background-color: white;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 100%;
+    padding: 4px 20px 0;
+    width: 100%;
+    font-family: none;
+}
+
+.input2 {
+    background-color: white;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 4px 20px 0;
+    width: 100%;
+    margin-top: 30px;
+    height: 50px;
+    font-family: none;
+    color: #65657b;
+}
+
+.cssbuttons-io {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 50%;
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #040D12, #5C8374);
+    color: var(--color-4);
+    overflow: hidden;
+    box-shadow: 0 0 5px #5C8374;
+    text-align: center;
+    padding: 15px;
+}
+
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    font-family: none;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.cssbuttons-io::before {
+    content: "";
+    background: #040D12;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mid {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .cssbuttons-io {
+        width: 70%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mid {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .input {
+        font-size: 16px;
+        padding: 4px 15px 0;
+    }
+
+    .input2 {
+        font-size: 16px;
+        padding: 4px 15px 0;
+    }
+
+    .cssbuttons-io {
+        width: 80%;
+        font-size: 16px;
+    }
+}

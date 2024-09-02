@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #040D12;
+    --color-2: #183D3D;
+    --color-3: #5C8374;
+    --color-4: #93B1A6;
+}
+
+/* NAV BAR STYLING STARTS */
+#NAV {
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.442);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
+    z-index: 1000;
+    font-family: "Philosopher", sans-serif;
+}
+
+.container {
+    padding: 13px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img {
+    width: 5%;
+}
+
+.navbar-brand {
+
+    font-size: 23px;
+}
+
+a.nav-link.active:hover {
+    text-decoration: none;
+    color: var(--color-4);
+    transform: scale(1.1);
+}
+
+a.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+a.nav-link:hover {
+    text-decoration: none;
+    color: var(--color-4);
+    transform: scale(1.1);
+}
+
+button {
+    color: #fff !important;
+    border-color: var(--color-4) !important;
+}
+
+button:hover {
+    background-color: #183D3D !important;
+    box-shadow: 0 0 20px #101514,
+        0 0 1px var(--color-3), 0 0 2px var(--color-2),
+        0 0 2px var(--color-3), 0 0 4px var(--color-3);
+}
+
+/* NAV BAR STYLING ENDS */
+
+body {
+    background-color: var(--color-1);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* font-family: Arial, sans-serif; */
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: fit-content;
+    /* height: 160vh; */
+    /* gap: 40px; */
+    padding: 7px 25px 7px 25px;
+}
+
+.main-container {
+    background-color: var(--color-1);
+    box-shadow: 0 0 20px #101514,
+        0 0 1px var(--color-3), 0 0 4px var(--color-2),
+        0 0 4px var(--color-3), 0 0 6px var(--color-3);
+    padding: 20px;
+    /* margin-right: -20px; */
+    border-radius: 8px;
+    margin-left: 15px;
+    width: 100%;
+    max-width: 53%;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 6%;
+    margin-top: 2%;
+    font-size: 40px;
+    color: var(--color-4);
+    font-weight: 600;
+    font-family: none;
+}
+
+.user_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input_box {
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+    font-family: none;
+    position: relative;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    position: absolute;
+    right: 4%;
+    top: 58%;
+    cursor: pointer;
+}
+
+.input_box span.details {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input_box input,
+.input_box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-4);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: var(--color-1);
+    color: #fff;
+    font-family: none;
+}
+
+.input_box input[type="file"] {
+    padding: 5px;
+}
+
+.input_box input:focus,
+.input_box select:focus {
+    border-color: #93B1A6;
+    border-width: 2px;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #fff;
+    font-family: none;
+}
+
+.agreement input {
+    margin-right: 10px;
+}
+
+.info {
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    font-family: none;
+}
+
+.info a {
+    color: var(--color-4);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+#openTOS {
+    text-decoration: none;
+    color: #5C8374;
+    font-family: none;
+}
+
+
+
+.cssbuttons-io {
+    display: block;
+    /* padding: 5px; */
+    width: 60%;
+    height: 55px;
+    margin: 17px auto;
+    position: relative;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #040D12, #5C8374);
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.4s;
+    font-family: none;
+}
+
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    /* display: inline-flex; */
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.cssbuttons-io::before {
+    content: "";
+    background: var(--color-2);
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
+.image {
+    width: 45%;
+    height: fit-content;
+    top: 0;
+    /* align-self: flex-start; */
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.tos-popup {
+    display: flex;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: all .4s;
+}
+
+.tos-popup .tosContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: 60vh;
+    overflow: auto;
+
+}
+
+.tosContent p {
+    color: black;
+    margin-top: 2%;
+}
+
+.close-tos {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.zeina {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: none;
+}
+
+/* RESPONSIVE CODES */
+@media (max-width: 930px) {
+    .main-container {
+        padding: 15px;
+        max-width: 66%;
+        margin-top: 10%;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .input_box {
+        width: 100%;
+    }
+
+    .cssbuttons-io {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+@media (max-width: 735px) {
+    .main-container {
+        max-width: 75%;
+        margin-top: 13%;
+    }
+
+    .cssbuttons-io {
+        font-size: 18px;
+    }
+}
