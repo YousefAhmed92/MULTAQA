@@ -15,9 +15,14 @@ $years=$fetch['year of xp'];
 $HoursPerDay=$fetch['available hours per day'];
 $skills=$fetch['skills'];
 $graduate=$fetch['graduate'];
-$description=$fetch['description'];
+// $description=$fetch['description'];
 $sample=$fetch['sample_name'];
 $link=$fetch['link'];
+
+$disfinal = "SELECT * FROM `freelancer` WHERE `freelancer_id` = '$freelancer_id'";
+$run_final = mysqli_query($connect, $disfinal);
+$fetch=mysqli_fetch_assoc($run_final);
+$finaldistrial=$fetch['description'];
 
 
 
@@ -62,7 +67,7 @@ if (isset($_POST['update'])) {
     }
 
     // Update link table
-    $updateLink = "UPDATE `link` SET `link`='$link' WHERE `freelancer_id`='$freelancer_id'";
+    $updateLink = "INSERT INTO `link` (`link_id`, `link`, `freelancer_id`) VALUES (NULL, '$link', '$freelancer_id')";
     mysqli_query($connect, $updateLink);
 
     header("Location: freelancer.profile.php");
@@ -106,7 +111,7 @@ if (isset($_POST['update'])) {
                 </div>
                 <!-- <div class="input-container ic2">
                     <label for="description" class="input-label">Description</label>
-                    <textarea id="description" class="input textarea" placeholder="Enter a brief description" name="description" >Add a description to your profile</textarea>
+                    <textarea id="description" class="input textarea" placeholder="Enter a brief description" name="description"  value="<?php echo $finaldistrial ; ?>" > <?php echo $finaldistrial ; ?></textarea>
                 </div> -->
                 <div class="input-container ic2">
                     <label for="price" class="input-label">Price/hour</label>
@@ -133,21 +138,21 @@ if (isset($_POST['update'])) {
                 <div class="input-container ic2">
                     <label for="graduate" class="input-label">Graduate</label>
                     <!-- <input id="projects" class="input" type="list" placeholder="graduate" name="graduate"
-                    value="<?php echo $graduate ; ?>"> -->
+                    value=""> -->
                     <select name="graduate" id="2">
-                    <option selected="" disabled="" value="">Education</option>
+                    <option selected="" disabled="" value=" <?php echo $graduate ; ?>">  your education now: <?php echo $graduate ; ?></option>
                     <option value="graduate">Graduate</option>
-                    <option value="under_graduate">Under Grad</option>
+                    <option value="undergraduate">Under Grad</option>
                     </select>
                 </div>
                 <div class="input-container ic2">
                     <label for="link" class="input-label">Link</label>
                     <input id="link" class="input" type="text" placeholder="Enter hours of project" value="<?php echo $link ; ?>" >
                 </div>
-                <div class="input-container ic2">
+<!--                 <div class="input-container ic2">
                     <label for="description" class="input-label">Description</label>
                     <textarea id="description" class="input-desc" placeholder="Enter a brief description" name="description" >Add a description to your profile</textarea>
-                </div>
+                </div> -->
             </div>
 
                 <button class="cssbuttons-io" name="update" type="submit">
