@@ -33,6 +33,11 @@ if (isset($_GET['id'])) {
     $join = "SELECT * FROM project JOIN client ON client.client_id = project.client_id WHERE project.client_id=$client_id";
     $run_join = mysqli_query($connect, $join);
 
+    $joinc = "SELECT * FROM `project` JOIN `category` ON category.cat_id = project.cat_id WHERE project.client_id=$client_id";
+    $run_joinc = mysqli_query($connect, $joinc);
+    $fetch=mysqli_fetch_assoc($run_joinc);
+    $cat_name=$fetch['cat_name'];
+
     // Check if the query was successful
     if (!$run_join) {
         die("Query failed: " . mysqli_error($connect));
@@ -171,6 +176,9 @@ if(isset($_POST['search'])){
         <!-- <h2>Description:</h2> -->
         <h2>Description: <p> <?php echo htmlspecialchars($row['descriptionP']); ?></p> </h2>
 
+        <h2>Category: <p> <?php echo htmlspecialchars($cat_name); ?></p> </h2>
+        <h2>Project Type: <p> <?php echo htmlspecialchars($row['type']); ?></p> </h2>
+
         <!-- <h2>Hours of project:</h2> -->
         <h2>Hours of project: <p> <?php echo htmlspecialchars($row['hours']); ?></p> </h2>
 
@@ -205,6 +213,10 @@ if(isset($_POST['search'])){
 
         <!--  <h2>Description:</h2> -->
         <h2>Description: <p> <?php echo htmlspecialchars($data['descriptionP']); ?></p> </h2>
+
+         <h2>Category: <p> <?php echo htmlspecialchars($cat_name); ?></p> </h2>
+
+        <h2>Project Type: <p> <?php echo htmlspecialchars($data['type']); ?></p> </h2>
 
         <!-- <h2>Hours of project:</h2> -->
         <h2>Hours of project: <p> <?php echo htmlspecialchars($data['hours']); ?></p> </h2>
