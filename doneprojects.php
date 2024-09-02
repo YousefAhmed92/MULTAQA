@@ -67,13 +67,14 @@ $select="SELECT * FROM `freelancer` JOIN `project member`
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="#">Landing</a>
+                        <a class="nav-link active" aria-current="page" href="landing.php">Landing</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="client-send-request.php">my requests</a>
                     </li>
+                    
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="freelancer.profile.php">my profile</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
@@ -82,7 +83,7 @@ $select="SELECT * FROM `freelancer` JOIN `project member`
                 </form> -->
             </div>
         </div>
-    </nav>
+  </nav>
     <!-- NAV BAR ENDS -->
     <div class="main">
         <div class="title">
