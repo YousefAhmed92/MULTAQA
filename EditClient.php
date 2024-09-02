@@ -17,13 +17,13 @@ if(isset($_POST['update'])){
     $edit_email = $_POST['email'];
     $drive = $_POST['drive'];
     $country=$_POST['country'];
-$phone_no=$_POST['phone_no'];
+$phone_number=$_POST['phone_no'];
 $discription=$_POST['description'];
 
 
 
     $update = "UPDATE client SET client_name='$client_name' ,  email='$edit_email' , `drive`='$drive',
-    country='$country',phone_no='$phone_no',business_descroption='$discription' WHERE client_id = '$client_id'";
+    country='$country',phone_no='$phone_number',business_descroption='$discription' WHERE client_id = '$client_id'";
     $runupdate = mysqli_query($connect , $update);
     header("location:agancy.profile.php");
 }
@@ -75,7 +75,7 @@ $discription=$_POST['description'];
             </div>
 
             <div class="input-container ic2">
-                <input class="input" type="text" placeholder="Contact Number" name="phone_no" 
+                <input class="input" type="text" placeholder="Contact Number" name="phone_number" 
                 value="<?php echo $phone_no ; ?>"/>
             </div>
             <div class="input-container ic2">
