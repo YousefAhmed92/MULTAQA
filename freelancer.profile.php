@@ -141,10 +141,10 @@ if(isset($_POST['logout'])){
 // Handle form submission for adding projects
 if (isset($_POST['add_project'])) {
     $sample_name = $_POST['sample_name'];
-    $description = $_POST['description'];
+    $descriptionsample = $_POST['description'];
 
     $insert_project_sql = "INSERT INTO sample (sample_name, description, freelancer_id)
-                              VALUES ('$sample_name', '$description', $freelancer_id)";
+                              VALUES ('$sample_name', '$descriptionsample', $freelancer_id)";
 
     if (mysqli_query($connect, $insert_project_sql)) {
         $message = "Project added successfully!";
@@ -179,7 +179,7 @@ if (mysqli_num_rows($run_sql) > 0) {
     $email = $row['email'];
     $available = $row['available hours per day'];
     $graduate = $row['graduate'];
-    $description = $row['description'];
+    // $description = $row['description'];
     $skills = $row['skills'];
     $price_per_hour = $row['price/hour'];
     $years_of_xp = $row['year of xp'];
@@ -202,6 +202,12 @@ $run_projects_sql = mysqli_query($connect, $projects_sql);
 
 $links_sql = "SELECT * FROM link WHERE freelancer_id = $freelancer_id";
 $run_links_sql = mysqli_query($connect, $links_sql);
+
+$disfinal = "SELECT * FROM `freelancer` WHERE `freelancer_id` = '$freelancer_id'";
+$run_final = mysqli_query($connect, $disfinal);
+$fetch=mysqli_fetch_assoc($run_final);
+$finaldistrial=$fetch['description'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -410,7 +416,7 @@ $run_links_sql = mysqli_query($connect, $links_sql);
 
             <div class="sec">
               
-                <P class="data">Description:  <?php echo $description; ?></P>
+                <P class="data">Description:  <?php echo $finaldistrial; ?></P>
             </div>
 <br>
 
