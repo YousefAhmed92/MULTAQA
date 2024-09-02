@@ -21,7 +21,7 @@ include "mail.php";
                 $freelancer_id = $fetch['freelancer_id'];
                 $_SESSION['freelancer_id'] = $freelancer_id;
                 // echo "logged";
-                $secured=" Welcome back to MULTAQA you're about to login to your account if it's not you please click here to to get your account back: http://localhost/case2tie/logF.php
+                $secured=" Welcome back to MULTAQA you're about to login to your account if it's not you please click here to to get your account back: http://localhost/lastdance/logF.php
                           -MULTAQA TEAM ";
                 $mail->setFrom('fatma.said283@gmail.com', 'MULTAQA'); // Sender mail address
                 $mail->addAddress($email); // Receiver mail address
